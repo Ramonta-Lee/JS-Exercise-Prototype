@@ -102,21 +102,18 @@ Car.prototype.drive = function(distance){
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby(babyAttributes, favoriteToy) {
-  this.name = this.name;
-  this.age = this.age;
+function Baby(babyAttributes) {
   Person.call(this, babyAttributes);
+  this.name = this.name;
+  this.age = 5;
   this.isBaby = babyAttributes.isBaby;
-  this.favoriteToy = favoriteToy;
+  this.favoriteToy = 'trains';
   
 }
-
+Baby.prototype = Object.create(Person.prototype);
 Baby.prototype.play = function(){
-  if(this.isBaby){
-    console.log(`Playing with ${this.favoriteToy}.`);
-  }
-
-}
+  return `Playing with ${this.favoriteToy}.`;
+  };
 
 /* 
   TASK 4
