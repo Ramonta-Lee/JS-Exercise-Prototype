@@ -116,10 +116,14 @@ Baby.prototype.play = function(){
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+
+  1. There is the global context. When in the global scope, the value of this will be the window/console object where javascript is run.
+
+  2.Implicit binding of the "this" key word means that if you're using a method on an object than the context is implied that you're referring to that object. The object left of the dot is the "this" you are referring to.
+
+  3.When "this" is used with the "new" binding, "this" refers to the specific instance of the object that is created and returned by a constructor function.
+
+  4."This" can be used explicitly stated and can be told what "this" is or referring to. 
 */
 
 
