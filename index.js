@@ -44,18 +44,19 @@ function Person(name, age) {
   this.age = age;
   this.stomach = [];
 }
-Person.prototype.eat = function(eat){
+Person.prototype.eat = function(someFood){
   if(this.stomach.length < 10){
-    this.stomach.push(eat);
-  }else{return this.stomach};
+    this.stomach.push(someFood);
+   }
 };
 
-Person.prototype.poop = function(poop){
-  if(this.stomach.length = 0){
-    function empty(stomach){
-      stomach = [];
-    }
-  }
+Person.prototype.poop = function(){
+  this.stomach = [];
+  // if(this.stomach.length = 0){
+  //   function empty(stomach){
+  //     stomach = [];
+  //   }
+  // }
 };
 
 Person.prototype.toString = function(){
@@ -102,14 +103,10 @@ Car.prototype.drive = function(distance){
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby(babyAttributes) {
-  Person.call(this, babyAttributes);
-  this.name = this.name;
-  this.age = 5;
-  this.isBaby = babyAttributes.isBaby;
-  this.favoriteToy = 'trains';
-  
-}
+function Baby(name, age, favoriteToy) {
+  Person.call(this, name, age),
+  this.favoriteToy = favoriteToy;
+};
 Baby.prototype = Object.create(Person.prototype);
 Baby.prototype.play = function(){
   return `Playing with ${this.favoriteToy}.`;
